@@ -1,0 +1,29 @@
+{
+  "name": "diffdirUi",
+  "version": "0.0.1-alpha.1",
+  "description": "A GUI Client for diffdir.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .;",
+    "test": "mocha --ui tdd ./tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomk79/diffdirUi.git"
+  },
+  "author": "Tomoya Koyanagi <tomk79@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomk79/diffdirUi/issues"
+  },
+  "homepage": "https://github.com/tomk79/diffdirUi#readme",
+  "dependencies": {
+    "electron": "^0.4.1",
+    "electron-debug": "^0.5.1",
+    "node-php-bin": "^0.1.6"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "mocha": "^2.1.0"
+  }
+}
