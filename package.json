@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .;",
+    "build": "node build.js mac; node build.js win;",
     "test": "mocha --ui tdd ./tests/"
   },
   "repository": {
@@ -20,7 +21,9 @@
   "dependencies": {
     "electron": "^0.4.1",
     "electron-debug": "^0.5.1",
-    "node-php-bin": "^0.1.6"
+    "node-php-bin": "^0.1.6",
+    "rimraf": "^2.5.2",
+    "zip-folder": "^1.0.0"
   },
   "devDependencies": {
     "electron-packager": "^5.2.1",
