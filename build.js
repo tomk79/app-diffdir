@@ -84,8 +84,7 @@ packager(
 		// asar: false,
 		asar: true, // aserに固める
 		prune: true,
-		// ignore: "node_modules/(electron-packager|electron-prebuilt|\.bin)|release\.js",
-		ignore: 'node_modules/(' + ignores + '|\.bin)|release(\.sh|\.js)',
+		ignore: 'node_modules/(' + ignores + '|\.bin)|build\.js',
 		'version-string': {
 			CompanyName: 'tomk79',
 			FileDescription: config.description,
