@@ -4,8 +4,8 @@
   "description": "A GUI Client for diffdir.",
   "main": "main.js",
   "scripts": {
-    "start": "electron .;",
     "build": "node build.js mac; node build.js win;",
+    "start": "electron .; gulp watch;",
     "test": "mocha --ui tdd ./tests/"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "dependencies": {
     "electron": "^0.4.1",
     "electron-debug": "^0.5.1",
+    "jquery": "^2.2.1",
     "node-php-bin": "^0.1.6",
     "rimraf": "^2.5.2",
     "zip-folder": "^1.0.0"

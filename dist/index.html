@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>diffdirUi</title>
-		<script>
-		</script>
+		<script src="./common/scripts/main.js"></script>
 	</head>
 	<body>
 		<h1>diffdirUi</h1>
-		<form action="javascript:;" method="get">
+		<form action="javascript:;" method="get" onsubmit="main.executeDiffdir(this); return false;">
+			<div><label>before: <input type="text" name="before" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=before]">select</a></div>
+			<div><label>after: <input type="text" name="after" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=after]">select</a></div>
+			<div><label>output: <input type="text" name="output" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=output]">select</a></div>
+			<div><label><input type="checkbox" name="strip-crlf" value="1" checked="checked" /> 改行コードの違いを無視</label></div>
+			<p><button type="submit">差分を抽出する</button></p>
 		</form>
 	</body>
 </html>

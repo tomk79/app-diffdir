@@ -6,7 +6,7 @@ var concat = require('gulp-concat');//ファイルの結合ツール
 var plumber = require("gulp-plumber");//コンパイルエラーが起きても watch を抜けないようになる
 var rename = require("gulp-rename");//ファイル名の置き換えを行う
 var twig = require("gulp-twig");//Twigテンプレートエンジン
-var browserify = require("gulp-browserify");//NodeJSのコードをブラウザ向けコードに変換
+// var browserify = require("gulp-browserify");//NodeJSのコードをブラウザ向けコードに変換
 var rimraf = require('rimraf');// The UNIX command `rm -rf` for node.
 var packageJson = require(__dirname+'/package.json');
 var _tasks = [
@@ -40,8 +40,8 @@ gulp.task('.css', function(){
 // *.js を処理
 gulp.task(".js", function() {
 	gulp.src(["src/**/*.js"])
-		.pipe(browserify({
-		}))
+		// .pipe(browserify({
+		// }))
 		.pipe(plumber())
 		// .pipe(uglify())
 		.pipe(gulp.dest( "./dist/" ))
