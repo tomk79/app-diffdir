@@ -81,8 +81,9 @@ packager(
 		'app-version': config.version,
 		'helper-bundle-id': helper_bundle_id,
 		overwrite: true,
-		asar: false,
-		// asar: true, // aserに固める
+		// asar: false,
+		asar: true, // aserに固める
+		"asar-unpack-dir": "node-php-bin",
 		prune: true,
 		ignore: 'node_modules/(' + ignores + '|\.bin)|build\.js',
 		'version-string': {
