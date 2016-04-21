@@ -32,7 +32,7 @@ var platform = 'darwin'
 var icon = './resources/app.icns'; //<- アプリアイコン
 if (isWin) {
 	platform = 'win32';
-	icon = './resources/app.ico'; //<- アプリアイコン
+	icon = './resources/app_for_Windows.ico'; //<- アプリアイコン
 }
 
 
