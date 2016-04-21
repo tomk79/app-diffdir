@@ -6,10 +6,11 @@
 	// console.log(__filename);
 	delete(require.cache[require('path').resolve(__filename)]);
 
+	var uppath = require('./unpackedPath.js');
+
 	module.exports = function(pathBefore, pathAfter, options){
 		var _this = this;
-		var nodePhpBin = require('node-php-bin').get();
-
+		var nodePhpBin = require( uppath('node_modules/node-php-bin/') ).get();
 
 		/**
 		 * 処理の開始
@@ -19,7 +20,7 @@
 
 			// console.log(__dirname);
 			var arg = [];
-			arg.push(__dirname + '/../php/diffdir.php');
+			arg.push( uppath('php/diffdir.php') );
 			if( options['-o'] ){
 				arg.push('-o');
 				arg.push(options['-o']);
