@@ -14,6 +14,11 @@ require('crash-reporter').start();
 // メインウィンドウはGCされないようにグローバル宣言
 var mainWindow;
 
+// 全てのウィンドウが閉じたら終了
+app.on('window-all-closed', function() {
+	app.quit();
+});
+
 var electron = require('electron');
 var Menu = electron.Menu;
 

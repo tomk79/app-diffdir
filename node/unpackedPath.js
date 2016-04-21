@@ -11,7 +11,7 @@
 	 */
 	module.exports = function(pathLocal){
 		var rootDir = __dirname + '/../unpacked/';
-		if( __dirname.match(new RegExp('\\/app\\.asar\\/')) ){ // ビルド後の場合
+		if( __dirname.match(new RegExp('(?:\\/|\\\\)app\\.asar(?:\\/|\\\\)')) ){ // ビルド後の場合
 			rootDir = __dirname + '/../../app.asar.unpacked/unpacked/';
 		}
 
