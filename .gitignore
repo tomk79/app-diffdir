@@ -30,5 +30,8 @@ node_modules
 composer.lock
 vendor
 
+# unpacked
+unpacked/
+
 # build
 build/

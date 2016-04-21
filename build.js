@@ -83,7 +83,7 @@ packager(
 		overwrite: true,
 		// asar: false,
 		asar: true, // aserに固める
-		"asar-unpack-dir": "node-php-bin",
+		"asar-unpack-dir": "unpacked",
 		prune: true,
 		ignore: 'node_modules/(' + ignores + '|\.bin)|build\.js',
 		'version-string': {
