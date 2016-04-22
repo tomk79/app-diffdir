@@ -15,9 +15,17 @@ var _tasks = [
 	'.css',
 	'.css.scss',
 	'.js',
+	'client-libs',
 	'unpacked'
 ];
 
+
+// client-libs (frontend) を処理
+gulp.task("client-libs", function() {
+	gulp.src(["node_modules/bootstrap/dist/**/*"])
+		.pipe(gulp.dest( './dist/common/libs/bootstrap/dist/' ))
+	;
+});
 
 // unpackするリソースをコピーする
 gulp.task('unpacked', function(){

@@ -2,17 +2,56 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>diffdirUi</title>
-		<script src="./common/scripts/main.js"></script>
+		<title>diffdir</title>
+		<link rel="stylesheet" href="./common/libs/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="./common/styles/main.css" />
 	</head>
 	<body>
-		<h1>diffdirUi</h1>
-		<form action="javascript:;" method="get" onsubmit="main.executeDiffdir(this); return false;">
-			<div><label>before: <input type="text" name="before" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=before]">select</a></div>
-			<div><label>after: <input type="text" name="after" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=after]">select</a></div>
-			<div><label>output: <input type="text" name="output" /></label> <a href="javascript:;" class="select-local-directory" data-for="[name=output]">select</a></div>
-			<div><label><input type="checkbox" name="strip-crlf" value="1" checked="checked" /> 改行コードの違いを無視</label></div>
-			<p><button type="submit">差分を抽出する</button></p>
-		</form>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>diffdir</h1>
+					<form action="javascript:;" class="form-horizontal" method="get" onsubmit="main.executeDiffdir(this); return false;">
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="inputBefore">before:</label>
+							<div class="col-xs-10">
+								<div class="input-group">
+									<input type="text" name="before" id="inputBefore" class="form-control" />
+									<span class="input-group-btn">
+										<a href="javascript:;" class="btn btn-default select-local-directory" data-for="[name=before]">select</a>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="inputAfter">after:</label>
+							<div class="col-xs-10">
+								<div class="input-group">
+									<input type="text" name="after" id="inputAfter" class="form-control" />
+									<span class="input-group-btn">
+										<a href="javascript:;" class="btn btn-default select-local-directory" data-for="[name=after]">select</a>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="inputOutput">output:</label>
+							<div class="col-xs-10">
+								<div class="input-group">
+									<input type="text" name="output" id="inputOutput" class="form-control" />
+									<span class="input-group-btn">
+										<a href="javascript:;" class="btn btn-default select-local-directory" data-for="[name=output]">select</a>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+						</div>
+						<div><label><input type="checkbox" name="strip-crlf" value="1" checked="checked" /> 改行コードの違いを無視</label></div>
+						<p><button type="submit" class="btn btn-primary btn-block btn-lg">差分を抽出する</button></p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./common/scripts/main.js"></script>
+		<script src="./common/libs/bootstrap/dist/js/bootstrap.js"></script>
 	</body>
 </html>
