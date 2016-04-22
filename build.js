@@ -32,10 +32,10 @@ function build( condition, callback ){
 	var app_bundle_id = 'jp.pxt.www'; //<- 自分のドメインなどを使用してください
 	var helper_bundle_id = 'jp.pxt.www'; //<- 自分のドメインなどを使用してください
 
-	var zip = function (relativePath, cb) {
+	var zip = function (relativePath, relativeZipPath, cb) {
 		zipFolder(
 			__dirname + '/' + relativePath + '/',
-			__dirname + '/' + relativePath + '.zip',
+			__dirname + '/' + relativeZipPath + '.zip',
 			function (err) {
 				if (err) {
 					console.log('zip ERROR!', err);
@@ -90,7 +90,9 @@ function build( condition, callback ){
 			}
 			console.log('appPath', appPath);
 
-			zip(appPath, function () {
+			var zipPath = './build/'+config.name+'-'+config.version+'-'+platform+'-'+arch;
+
+			zip(appPath, zipPath, function () {
 				console.timeEnd("build-time");
 				console.log('Done!!');
 				callback();
