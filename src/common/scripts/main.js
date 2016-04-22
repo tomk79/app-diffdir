@@ -17,8 +17,12 @@
 					'--strip-crlf': $form.find('input[name=strip-crlf]:checked').val()
 				}
 			);
+			$('input,button').attr({
+				'disabled': 'disabled'
+			});
 			dd.execute(function(data, error, code){
 				alert('fin.');
+				$('input,button').removeAttr('disabled');
 			});
 		}
 
